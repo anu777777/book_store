@@ -1,0 +1,24 @@
+<html>
+<script>
+    function myformvalidate() {
+        var name = document.myform.name.value;
+        var password = document.myform.pass.value;
+        if (name == null || name == "") {
+            alert("This field can't be empty!");
+            return false;
+        }
+        else if (password.length < 6) {
+            alert("Password can't be of less than 6 characters!")
+        }
+    }
+</script>
+
+<body>
+    <form action="" name="myform" onsubmit="return myformvalidate()">
+        Name : <input type="text" name="name">
+        Password : <input type="password" name="pass">
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
